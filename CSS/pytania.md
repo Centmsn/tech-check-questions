@@ -155,7 +155,7 @@ Kilka ważnych rzeczy do zapamiętania:
 - Jeśli nie ustawimy żadnej z tych wartości, element z `position: absolute` zostanie umieszczony w dokładnie tym samym miejscu, co gdyby miał `position: static`.
 - Wszystkie inne elementy układają się tak, jakby element z pozycją absolute w ogóle nie istniał, ignorując jego zajmowaną przestrzeń.
 - Pozycjonowanie elementu z pozycją absolute odbywa się względem początku dokumentu HTML (`<html>`), czyli górnej krawędzi okna przeglądarki (przy założeniu, że wszyscy przodkowie danego elementu mają pozycję domyślną `static`).
-- Jeżeli któryś z przodków ma ustawioną pozycję na relative, element z position: absolute będzie się pozycjonował względem tego przodka.
+- Jeżeli któryś z przodków ma ustawioną pozycję inną niż static, element z position: absolute będzie się pozycjonował względem tego przodka.
 
 ## 8. Wyjaśnij pojęcie: waga selektorów CSS
 
