@@ -161,7 +161,7 @@ Waga selektorów wpływa na to, który z nich zostanie wzięty pod uwagę i jaki
 1. Najwyższy priorytet mają style zapisane inline, czyli bezpośrednio w tagu HTML, przy użyciu atrybutu `style="..."`. Nadpisać je mogą wyłącznie style oznaczone jako `!important`.
 2. Następne w kolejności są style nadane za pomocą selektora `#id`
 3. Po nich występują style nadane za pomocą klas (`.class`), pseudoklas (`:visited`) oraz atrybutów (`[data-test="example"]`)
-4. Na samym końcu są style nadane za pomocą selektora elementów (`div`, `p`)
+4. Na samym końcu są style nadane za pomocą selektorów elementów (`div`, `p`) oraz pseudoelementów (`::before`)
 
 **Najłatwiej zapamiętać te reguły w następujący sposób:**
 Istnieją cztery kolumny. Utworzenie selektora sprawia, że do wybranej z nich (w zależności od selektora) dodajemy jeden punkt. Niższe kolumny, nigdy nie osiągną większej wagi, niż kolumny wyższe.
