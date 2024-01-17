@@ -16,16 +16,19 @@ Zarówno `em`, jak i `rem` są jednostkami stosowanymi w **responsywnym** projek
 </html>
 ```
 
-W przypadku `em`, jednostka ta odnosi się do wartości `font-size` rodzica (w tym przypadku `headera`). Jeśli `font-size` `headera` wynosi `20px`, to `1em` będzie równoważne `20px`, a `1.5em` będzie równoważne `30px`:
+W przypadku `em`, jednostka ta odnosi się do wartości `font-size` rodzica (w tym przypadku `headera`). Jeśli `font-size` `headera` wynosi `20px`, to `1em` będzie równoważne `20px`, a `1.5em` będzie równoważne `30px`.
+Jednak ważne jest zrozumienie, że jednostka `em` odnosi się do `font-size` rodzica tylko w przypadku właściwości `font-size`. W przypadku innych właściwości, takich jak `margin`,` padding`, `width`, `height` itp., jednostka `em` będzie się odnosić do `font-size` tego konkretnego elementu, w którym jest używana.
 
 ```
-header {
-    font-size: 20px;
+ .header {
+      font-size: 16px;
 }
 
-header div {
-    height: 1em;   /* 20px */
-    width: 1.5em;  /* 30px */
+.header div {
+  font-size: 1.5em; /* Rozmiar czcionki 1.5 razy większy niż rozmiar czcionki header */
+  /* Wartość w pikselach: 24px (16px * 1.5) */
+  width: 10em; /* Szerokość elementu 10 razy większa niż rozmiar czcionki w tym elemencie */
+  /* Wartość w pikselach: 240px (24px * 10) */
 }
 ```
 
@@ -152,7 +155,7 @@ Kilka ważnych rzeczy do zapamiętania:
 - Jeśli nie ustawimy żadnej z tych wartości, element z `position: absolute` zostanie umieszczony w dokładnie tym samym miejscu, co gdyby miał `position: static`.
 - Wszystkie inne elementy układają się tak, jakby element z pozycją absolute w ogóle nie istniał, ignorując jego zajmowaną przestrzeń.
 - Pozycjonowanie elementu z pozycją absolute odbywa się względem początku dokumentu HTML (`<html>`), czyli górnej krawędzi okna przeglądarki (przy założeniu, że wszyscy przodkowie danego elementu mają pozycję domyślną `static`).
-- Jeżeli któryś z przodków ma ustawioną pozycję na relative, element z position: absolute będzie się pozycjonował względem tego przodka.
+- Jeżeli któryś z przodków ma ustawioną pozycję inną niż static, element z position: absolute będzie się pozycjonował względem tego przodka.
 
 ## 8. Wyjaśnij pojęcie: waga selektorów CSS
 
@@ -161,7 +164,7 @@ Waga selektorów wpływa na to, który z nich zostanie wzięty pod uwagę i jaki
 1. Najwyższy priorytet mają style zapisane inline, czyli bezpośrednio w tagu HTML, przy użyciu atrybutu `style="..."`. Nadpisać je mogą wyłącznie style oznaczone jako `!important`.
 2. Następne w kolejności są style nadane za pomocą selektora `#id`
 3. Po nich występują style nadane za pomocą klas (`.class`), pseudoklas (`:visited`) oraz atrybutów (`[data-test="example"]`)
-4. Na samym końcu są style nadane za pomocą selektora elementów (`div`, `p`)
+4. Na samym końcu są style nadane za pomocą selektorów elementów (`div`, `p`) oraz pseudoelementów (`::before`)
 
 **Najłatwiej zapamiętać te reguły w następujący sposób:**
 Istnieją cztery kolumny. Utworzenie selektora sprawia, że do wybranej z nich (w zależności od selektora) dodajemy jeden punkt. Niższe kolumny, nigdy nie osiągną większej wagi, niż kolumny wyższe.
