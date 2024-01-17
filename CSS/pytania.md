@@ -16,16 +16,19 @@ Zarówno `em`, jak i `rem` są jednostkami stosowanymi w **responsywnym** projek
 </html>
 ```
 
-W przypadku `em`, jednostka ta odnosi się do wartości `font-size` rodzica (w tym przypadku `headera`). Jeśli `font-size` `headera` wynosi `20px`, to `1em` będzie równoważne `20px`, a `1.5em` będzie równoważne `30px`:
+W przypadku `em`, jednostka ta odnosi się do wartości `font-size` rodzica (w tym przypadku `headera`). Jeśli `font-size` `headera` wynosi `20px`, to `1em` będzie równoważne `20px`, a `1.5em` będzie równoważne `30px`.
+Jednak ważne jest zrozumienie, że jednostka `em` odnosi się do `font-size` rodzica tylko w przypadku właściwości `font-size`. W przypadku innych właściwości, takich jak `margin`,` padding`, `width`, `height` itp., jednostka `em` będzie się odnosić do `font-size` tego konkretnego elementu, w którym jest używana.
 
 ```
-header {
-    font-size: 20px;
+ .header {
+      font-size: 16px;
 }
 
-header div {
-    height: 1em;   /* 20px */
-    width: 1.5em;  /* 30px */
+.header div {
+  font-size: 1.5em; /* Rozmiar czcionki 1.5 razy większy niż rozmiar czcionki header */
+  /* Wartość w pikselach: 24px (16px * 1.5) */
+  width: 10em; /* Szerokość elementu 10 razy większa niż rozmiar czcionki w tym elemencie */
+  /* Wartość w pikselach: 240px (24px * 10) */
 }
 ```
 
