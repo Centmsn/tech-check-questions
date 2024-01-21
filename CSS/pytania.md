@@ -4,7 +4,7 @@
 
 Zarówno `em`, jak i `rem` są jednostkami stosowanymi w **responsywnym** projektowaniu (podobnie jak `%` lub `vh`). Obydwie opierają się na wartości `font-size`. Weźmy pod uwagę prostą strukturę HTML:
 
-```
+```html
 <html lang="en">
     <!-- ... -->
     <body>
@@ -19,22 +19,22 @@ Zarówno `em`, jak i `rem` są jednostkami stosowanymi w **responsywnym** projek
 W przypadku `em`, jednostka ta odnosi się do wartości `font-size` rodzica (w tym przypadku `headera`). Jeśli `font-size` `headera` wynosi `20px`, to `1em` będzie równoważne `20px`, a `1.5em` będzie równoważne `30px`.
 Jednak ważne jest zrozumienie, że jednostka `em` odnosi się do `font-size` rodzica tylko w przypadku właściwości `font-size`. W przypadku innych właściwości, takich jak `margin`,` padding`, `width`, `height` itp., jednostka `em` będzie się odnosić do `font-size` tego konkretnego elementu, w którym jest używana.
 
-```
+```css
  .header {
-      font-size: 16px;
+    font-size: 16px;
 }
 
 .header div {
-  font-size: 1.5em; /* Rozmiar czcionki 1.5 razy większy niż rozmiar czcionki header */
-  /* Wartość w pikselach: 24px (16px * 1.5) */
-  width: 10em; /* Szerokość elementu 10 razy większa niż rozmiar czcionki w tym elemencie */
-  /* Wartość w pikselach: 240px (24px * 10) */
+    font-size: 1.5em; /* Rozmiar czcionki 1.5 razy większy niż rozmiar czcionki header */
+    /* Wartość w pikselach: 24px (16px * 1.5) */
+    width: 10em; /* Szerokość elementu 10 razy większa niż rozmiar czcionki w tym elemencie */
+    /* Wartość w pikselach: 240px (24px * 10) */
 }
 ```
 
 W przypadku `rem`, jednostka ta odnosi się do wartości `font-size` elementu HTML (`root`), który domyślnie wynosi `16px`. Dlatego, jeśli `font-size` elementu `<span>` wynosi `2rem`, to będzie równoważne `32px`:
 
-```
+```css
 header {
     font-size: 20px;
 }
@@ -84,7 +84,7 @@ Więcej na ten temat znajdziesz tutaj: [MDN:BoxModel](https://developer.mozilla.
 
 Zjawisko margin collapse występuje, gdy marginesy dwóch sąsiednich elementów blokowych nakładają się na siebie, a wynikowy margines jest równy większemu z dwóch marginesów.
 
-```
+```html
 <div>
     <div style="margin-bottom: 20px;">Element 1</div>
     <div style="margin-top: 30px;">Element 2</div>
@@ -97,7 +97,7 @@ W wyniku margin collapse odstęp pomiędzy Elementem 1 a Elementem 2 wyniesie `3
 
 Zjawisko margin collapsing nie zajdzie w przypadku gdy kontenerem jest flexbox. W przykładzie poniżej, odstęp między elementami zsumuje się i wyniesie `50px`.
 
-```
+```html
 <div style="display: flex; flex-direction: column">
     <div style="margin-bottom: 20px;">Element 1</div>
     <div style="margin-top: 30px;">Element 2</div>
@@ -120,7 +120,7 @@ BEM (Block Element Modifier) to konwencja nazewnictwa klas, która pomaga zorgan
 - To składnik bloku, który nie ma sensu istnieć samodzielnie. Jest związany z blokiem.
 - Nazwa elementu jest oddzielona dwoma podwójnymi podkreśleniami od nazwy bloku.
 
-```
+```html
 <div class="button">
   <span class="button__text">Tekst przycisku</span>
 </div>
@@ -131,7 +131,7 @@ BEM (Block Element Modifier) to konwencja nazewnictwa klas, która pomaga zorgan
 - To flaga lub klucz, która opisuje zmianę wyglądu lub zachowania bloku lub elementu.
 - Modyfikatory są dodawane do bloków lub elementów i zmieniają ich wygląd lub zachowanie. Zazwyczaj są rozdzielone dwoma myślnikami (`--`).
 
-```
+```html
 <div class="button button--large">
   <span class="button__text button__text--bold">Duży przycisk</span>
 </div>
@@ -200,7 +200,7 @@ Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwo
 
 **HTML**
 
-```
+```html
 <div>
     <p>some paragraph</p>
     <h1>Hello world!</h1>
@@ -209,7 +209,7 @@ Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwo
 
 **CSS**
 
-```
+```css
 h1[title="Hello world!"] {
     color: red;
 }
@@ -227,33 +227,33 @@ div > p > h1 {
 
 **HTML**
 
-```
- <body>
+```html
+<body>
     <main class="container flexbox">
-      <nav class="navigation">
-        <!-- content -->
-      </nav>
+        <nav class="navigation">
+            <!-- content -->
+        </nav>
     </main>
-  </body>
+</body>
 ```
 
 **CSS**
 
-```
+```css
 .container {
-  width: 100%;
-  height: 500px;
-  background-color: blue;
+    width: 100%;
+    height: 500px;
+    background-color: blue;
 }
 
 .container.flexbox nav {
-  background-color: green;
+    background-color: green;
 }
 
 .navigation {
-  width: 100%;
-  height: 200px;
-  background-color: red;
+    width: 100%;
+    height: 200px;
+    background-color: red;
 }
 ```
 
@@ -281,21 +281,21 @@ Wykorzystywane są najczęściej do tworzenia responsywnych layoutów.
 
 **HTML**
 
-```
+```html
 <body>
-  <div></div>
+    <div></div>
 </body>
 ```
 
 **CSS**
 
-```
+```css
 div {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
-  margin: 10px;
-  border: 10px solid black;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid black;
 }
 ```
 
@@ -307,21 +307,21 @@ div {
 
 **HTML**
 
-```
+```html
 <body>
-  <div></div>
+    <div></div>
 </body>
 ```
 
 **CSS**
 
-```
+```css
 div {
-  box-sizing: border-box;
-  width: 100px;
-  padding: 20px;
-  margin: 10px;
-  border: 10px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid black;
 }
 ```
 
