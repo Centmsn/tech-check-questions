@@ -145,3 +145,21 @@ const numbers = [1, 2, 3, 4, 5];
 numbers.some((element) => element > 4); // true - jeden element jest większy od 4
 numbers.some((element) => element > 5); // false - żaden z elementów nie jest większy od 5
 ```
+
+## Czym różni się metoda forEach od map?
+`forEach` jest alternatywą dla pętli, a wartośc zwrócona przez przekazaną do środka funkcję nie ma znaczenia - nie wpływa na elementy tablicy. Warto pamiętać, że metoda `forEach` zawsze zwraca `undefined`, a więc nie ma sensu przypisywać jej wywołania do zmiennej.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const result = numbers.forEach((element) => element * 2);
+
+result // undefined, oryginalna tablica również pozostała niezmieniona
+```
+
+Metoda `map` również iteruje po tablicy, jednak w jej przypadku, wartość zwracana przez callback ma duże znaczenie - `map` służy do transformacji / modyfikacji elementów tablicy. Jest niedestrukcyjny i zwraca nową tablicę.
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const result = numbers.map((element) => element * 2);
+
+result // [2, 4, 6, 8, 10]
+```
