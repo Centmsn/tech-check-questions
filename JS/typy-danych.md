@@ -23,3 +23,28 @@ Ważne jest również to, że wartości utworzone w ten sposób nie będą równ
 100n == 100 // true
 100n === 100 // false
 ```
+
+### Wytłumacz różnicę pomiędzy operatorem == a ===
+Operator `==` potocznie nazywany płytkim porównaniem dokonuje niejawnej konwersji typów (ang. _type coercion_). Oznacza to, że:
+```javascript
+2 == "2" // true - udało się zamienić typ number na typ string, więc porównanie wyglądało tak: "2" == "2"
+false == 0 // true - udało się zamienić false, na typ number, a porównanie wyglądało tak 0 == 0
+null == undefined // true
+[] == "" // true
+
+2 == 2 // true
+[] == [] // false - typ referencyjny, porównywana jest lokalizacja w pamięci, a nie wartości w środku
+```
+
+Operator `===`, czyli głębokie porównanie, działa nieco inaczej. Nie dopuszcza on do niejawnej konwersji typów, więc wynik jego działania będzie zupełnie inny:
+```javascript
+2 === "2" // false - typ string nigdy nie będzie równy typowi number, jeżeli zastosujemy ===
+false === 0 // false - typ boolean nie jest równy typowi number
+null === undefined // false - null i undefined to inne typy
+[] === "" // false - pusta tablica nie jest pustym stringiem
+
+2 === 2 // true
+[] === [] // false - typ referencyjny, porównywana jest lokalizacja w pamięci, a nie wartości w środku
+```
+
+Zazwyczaj zaleca się używanie `===` ponieważ jego wyniki są bardziej przewidywalne, a jendocześnie ograniczamy możliwość popełnienia błędu związanego z niejawną zmianą typu. 
