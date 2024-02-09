@@ -24,7 +24,7 @@ Ważne jest również to, że wartości utworzone w ten sposób nie będą równ
 100n === 100 // false
 ```
 
-### Wytłumacz różnicę pomiędzy operatorem == a ===
+## Wytłumacz różnicę pomiędzy operatorem == a ===
 Operator `==` potocznie nazywany płytkim porównaniem dokonuje niejawnej konwersji typów (ang. _type coercion_). Oznacza to, że:
 ```javascript
 2 == "2" // true - udało się zamienić typ number na typ string, więc porównanie wyglądało tak: "2" == "2"
