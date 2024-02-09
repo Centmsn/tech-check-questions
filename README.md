@@ -6,9 +6,9 @@ Celem tego repozytorium jest stworzenie bazy pytań (i odpowiedzi), które częs
 - przyczynisz się do rozbudowy bazy pytań i przysłużysz się społeczności
 - będziesz mieć odpowiedzi w formie notatek w repozytorium. Zawsze są pod ręką i nigdy nie zginą
 
-### Chcę dodać pytanie! Jak mam to zrobić?**
+### Chcę dodać pytanie! Jak mam to zrobić?
 
-Jeżeli uważasz, że brakuje jakiegoś pytania, to koniecznie utwórz pull request w którym je dodasz. Przyczynisz się, do rozbudowy bazy 😎
+Jeżeli uważasz, że brakuje jakiegoś pytania, to koniecznie utwórz pull request w którym je dodasz. Przyczynisz się, do rozbudowy bazy i utrwalisz własną wiedzę 😎
 
 1. Zrób forka repozytorium klikając w przycisk
 
