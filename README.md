@@ -10,7 +10,7 @@ Celem tego repozytorium jest stworzenie bazy pytań (i odpowiedzi), które częs
 
 Jeżeli uważasz, że brakuje jakiegoś pytania, to koniecznie utwórz pull request w którym je dodasz. Przyczynisz się, do rozbudowy bazy 😎
 
-_Ale jak mam to zrobić?_
+**Chcę dodać pytanie! Jak mam to zrobić?**
 1. Zrób forka repozytorium klikając w przycisk
 
 ![image](https://github.com/Centmsn/tech-check-questions/assets/65851661/885b43bd-623a-474c-b9fe-55f718d26cc8)
