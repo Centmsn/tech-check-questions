@@ -1,12 +1,16 @@
 ## Jakie są różnice między tablicami w JavaScript a innymi strukturami danych, takimi jak obiekty?
-Tablice w JavaScript są uporządkowanymi kolekcjami elementów, do których można odwoływać się za pomocą indeksów liczbowych, podczas gdy obiekty są kolekcjami 
-nieuporządkowanych par klucz-wartość. Warto pamiętać, że pod "spodem" tablice to nadal obiekty, a JavaScript nie posiada osobnego typu, dedykowanego dla tablic.
+<details>
+  <summary>Odpowiedź</summary>
 
-```javascript
-const arr = [];
-
-typeof(arr) // "object"
-```
+  Tablice w JavaScript są uporządkowanymi kolekcjami elementów, do których można odwoływać się za pomocą indeksów liczbowych, podczas gdy obiekty są kolekcjami 
+  nieuporządkowanych par klucz-wartość. Warto pamiętać, że pod "spodem" tablice to nadal obiekty, a JavaScript nie posiada osobnego typu, dedykowanego dla tablic.
+  
+  ```javascript
+  const arr = [];
+  
+  typeof(arr) // "object"
+  ```
+</details>
 
 ## W jaki sposób możemy sprawdzić, czy zmienna zawiera tablicę?
 Najprostszym sposobem jest użycie metody `Array.isArray(zmienna)` i przekazanie do niej sprawdzanej zmiennej. Pamiętaj, że sprawdzenie za pomocą `typeof` zwróci w przypadku tablicy
