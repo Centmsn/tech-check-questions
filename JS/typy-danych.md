@@ -1,5 +1,7 @@
 ## Jakie typy danych istnieją w JavaScript?
-Jest ich 8, jednak najczęściej wykorzystuje się 6:
+<details>
+  <summary>Odpowiedź</summary>
+  Jest ich 8, jednak najczęściej wykorzystuje się 6:
 - `string`
 - `number`
 - `boolean`
@@ -10,8 +12,11 @@ Jest ich 8, jednak najczęściej wykorzystuje się 6:
 Pozostałe dwa to:
 - `symbol`
 - `bigInt` (używane do tworzenia naprawdę dużych liczb)
+</details>
 
 ## Opisz kiedy stosować bigInt i jak utworzyć taką liczbę
+<details>
+  <summary>Odpowiedź</summary>
 `bigInt` powinien być stosowany tylko wtedy, gdy mamy do czynienia z liczbą większą niż 2<sup>53</sup> - 1. Wymaga większej liczby bitów do przechowywania w pamięci, więc jest mniej wydajny niż typ `number`
 
 **Sposoby na utowrzenie są dwa**
@@ -23,8 +28,11 @@ Ważne jest również to, że wartości utworzone w ten sposób nie będą równ
 100n == 100 // true
 100n === 100 // false
 ```
+</details>
 
 ## Wytłumacz różnicę pomiędzy operatorem == a ===
+<details>
+  <summary>Odpowiedź</summary>
 Operator `==` potocznie nazywany płytkim porównaniem dokonuje niejawnej konwersji typów (ang. _type coercion_). Oznacza to, że:
 ```javascript
 2 == "2" // true - udało się zamienić typ number na typ string, więc porównanie wyglądało tak: "2" == "2"
@@ -47,4 +55,14 @@ null === undefined // false - null i undefined to inne typy
 [] === [] // false - typ referencyjny, porównywana jest lokalizacja w pamięci, a nie wartości w środku
 ```
 
-Zazwyczaj zaleca się używanie `===` ponieważ jego wyniki są bardziej przewidywalne, a jendocześnie ograniczamy możliwość popełnienia błędu związanego z niejawną zmianą typu. 
+Zazwyczaj zaleca się używanie `===` ponieważ jego wyniki są bardziej przewidywalne, a jendocześnie ograniczamy możliwość popełnienia błędu związanego z niejawną zmianą typu.
+</details>
+
+## Wyjaśnij czym jest `symbol` i kiedy go stosować
+<details>
+  <summary>Odpowiedź</summary>
+
+`symbol` pisany małą literą to typ prymitywny. Podobnie, jak `string`, posiada on swój odpowiednik pisany wielką literą - `Symbol` (w tym przypadku mamy do czynienia z obiektem). **Symbol jest zawsze unikatową wartością i nie da się utworzyć dwóch identycznych symboli**. Z tego właśnie wynika jego główna zaleta i zastosowanie. **Najczęściej wykorzystywany jest w obiektach, jako klucz**.
+
+JavaScript posiada także kilka wbudowanych w język symboli, za pomocą których możemy modyfikować zachowanie niektórych elementów język. Więcej na temat symboli znajdziesz [tutaj](https://www.4spacje.pl/article/symbole-w-javascript)
+</details> 
