@@ -1,6 +1,6 @@
 # CSS - pytania i odpowiedzi z sesji tech-check
 
-## 1. Wyjaśnij różnicę pomiędzy em i rem
+## 1. Wyjaśnij różnicę pomiędzy jednostkami `em` i `rem`
 <details>
 <summary>Odpowiedź</summary>
     
@@ -48,7 +48,7 @@ header span {
 
 </details>
 
-## 2. Wytłumacz model pudełkowy
+## 2. Wytłumacz model pudełkowy (box model)
 <details>
 <summary>Odpowiedź</summary>
 
@@ -69,7 +69,7 @@ Więcej na ten temat znajdziesz tutaj: [MDN:BoxModel](https://developer.mozilla.
 
 </details>
 
-## 3. Wytłumacz różnicę pomiędzy: inline, block, inline-block
+## 3. Wytłumacz różnicę pomiędzy: `inline`, `block`, `inline-block`
 <details>
 <summary>Odpowiedź</summary>
 
@@ -169,7 +169,7 @@ Link do wizualizacji na MDN: [MDN-link](https://developer.mozilla.org/en-US/docs
 
 </details>
 
-## 7. Wytłumacz działanie właściwości position: absolute
+## 7. Wytłumacz działanie właściwości `position: absolute`
 <details>
 <summary>Odpowiedź</summary>
 
@@ -220,7 +220,7 @@ Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwo
 
 </details>
 
-## 10. Wytłumacz działanie następujących selektorów
+## 10. Wytłumacz działanie następujących selektorów: `p + span`, `p > span`, `span:nth-child(2n + 5)`
 <details>
 <summary>Odpowiedź</summary>
 
@@ -303,7 +303,7 @@ div > p > h1 {
 
 </details>
 
-## 12. Wyjaśnij działanie jednostek vh i vw
+## 12. Wyjaśnij działanie jednostek `vh` i `vw`
 <details>
 <summary>Odpowiedź</summary>
 
@@ -353,7 +353,7 @@ div {
 
 ---
 
-**Przykład 2 - jakie wymiary ma element div?**
+**Przykład 2 - jakie wymiary ma element `div`?**
 
 **HTML**
 
