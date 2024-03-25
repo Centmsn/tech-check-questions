@@ -1,7 +1,9 @@
 # CSS - pytania i odpowiedzi z sesji tech-check
 
 ## 1. Wyjaśnij różnicę pomiędzy em i rem
-
+<details>
+<summary>Odpowiedź</summary>
+    
 Zarówno `em`, jak i `rem` są jednostkami stosowanymi w **responsywnym** projektowaniu (podobnie jak `%` lub `vh`). Obydwie opierają się na wartości `font-size`. Weźmy pod uwagę prostą strukturę HTML:
 
 ```html
@@ -44,7 +46,11 @@ header span {
 }
 ```
 
+</details>
+
 ## 2. Wytłumacz model pudełkowy
+<details>
+<summary>Odpowiedź</summary>
 
 W CSS każdy element HTML można przedstawić jako model pudełkowy (`box model`). Z wykorzystaniem modelu pudełkowego, możemy sterować wyglądem i układem strony.
 
@@ -61,7 +67,11 @@ Poniżej krótkie omówienie każdego elementu:
 
 Więcej na ten temat znajdziesz tutaj: [MDN:BoxModel](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
+</details>
+
 ## 3. Wytłumacz różnicę pomiędzy: inline, block, inline-block
+<details>
+<summary>Odpowiedź</summary>
 
 **Elementy inline** (`display: inline`):
 
@@ -80,7 +90,11 @@ Więcej na ten temat znajdziesz tutaj: [MDN:BoxModel](https://developer.mozilla.
 - Elementy `inline-block` łączą cechy elementów `inline` i `block`. Zachowują się jak elementy `inline`, ponieważ nie zaczynają - nowego wiersza, ale można ustawić im szerokość i wysokość.
 - Przykłady: `<img>`, `<button>`.
 
+</details>
+
 ## 4. Wyjaśnij zachowanie margin-collapse we flexie
+<details>
+<summary>Odpowiedź</summary>
 
 Zjawisko margin collapse występuje, gdy marginesy dwóch sąsiednich elementów blokowych nakładają się na siebie, a wynikowy margines jest równy większemu z dwóch marginesów.
 
@@ -104,7 +118,11 @@ Zjawisko margin collapsing nie zajdzie w przypadku gdy kontenerem jest flexbox. 
 </div>
 ```
 
+</details>
+
 ## 5. Wyjaśnij czym jest metodologia BEM
+<details>
+<summary>Odpowiedź</summary>
 
 BEM (Block Element Modifier) to konwencja nazewnictwa klas, która pomaga zorganizować kod CSS i HTML w bardziej czytelny i zrozumiały sposób. BEM skupia się na trzech podstawowych elementach: Blok, Element i Modyfikator.
 
@@ -137,7 +155,11 @@ BEM (Block Element Modifier) to konwencja nazewnictwa klas, która pomaga zorgan
 </div>
 ```
 
+</details>
+
 ## 6. Jaka jest różnica pomiędzy position fixed, a sticky?
+<details>
+<summary>Odpowiedź</summary>
 
 **Fixed** (`position: fixed`) - umożliwia umieszczenie elementu w dokładnie określonym miejscu na stronie, niezależnie od przewijania strony. Element z pozycją `fixed` pozostaje "przylepiony" do widocznej przestrzeni na ekranie, nie zmieniając swojej pozycji w zależności od przewinięcia strony.
 
@@ -145,7 +167,11 @@ BEM (Block Element Modifier) to konwencja nazewnictwa klas, która pomaga zorgan
 
 Link do wizualizacji na MDN: [MDN-link](https://developer.mozilla.org/en-US/docs/Web/CSS/position#try_it)
 
+</details>
+
 ## 7. Wytłumacz działanie właściwości position: absolute
+<details>
+<summary>Odpowiedź</summary>
 
 Ustawienie position: `absolute` na elemencie sprawia, że wypada on z normalnego przepływu dokumentu HTML. Oznacza to, że przestaje on mieć wpływ na układ innych elementów, a równocześnie sam jest ignorowany przez pozostałe elementy.
 
@@ -157,7 +183,11 @@ Kilka ważnych rzeczy do zapamiętania:
 - Pozycjonowanie elementu z pozycją absolute odbywa się względem początku dokumentu HTML (`<html>`), czyli górnej krawędzi okna przeglądarki (przy założeniu, że wszyscy przodkowie danego elementu mają pozycję domyślną `static`).
 - Jeżeli któryś z przodków ma ustawioną pozycję inną niż static, element z position: absolute będzie się pozycjonował względem tego przodka.
 
+</details>
+
 ## 8. Wyjaśnij pojęcie: waga selektorów CSS
+<details>
+<summary>Odpowiedź</summary>
 
 Waga selektorów wpływa na to, który z nich zostanie wzięty pod uwagę i jakie style zostaną zaaplikowane do elementu HTML.
 
@@ -173,7 +203,11 @@ Prosta wizualizacja:
 
 ![Wizualizacja specyficzności w css](./images/css-specificity.png)
 
+</details>
+
 ## 9. Wyjaśnij czym są pseudo elementy
+<details>
+<summary>Odpowiedź</summary>
 
 Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwotnie nie ma w drzewie DOM. Dają także możliwość nadania im dowolnych styli CSS. Najczęściej są wykorzystywane w celu utworzenia elementów dekoracyjnych na stronie.
 
@@ -184,7 +218,11 @@ Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwo
 - `::selection` - pozwala na zmianę wyglądu zaznaczonych elementów strony
 - `::placeholder` - zmienia wygląd placeholderów w inputach
 
+</details>
+
 ## 10. Wytłumacz działanie następujących selektorów
+<details>
+<summary>Odpowiedź</summary>
 
 `p + span` - plus to selektor rodzeństwa. Wyszukane zostaną wszystkie tagi `<span>`, których bezpośrednim rodzeństwem jest tag `<p>`
 
@@ -192,9 +230,13 @@ Pseudo elementy pozwalają na utworzenie dodatkowych elementów, których pierwo
 
 `p > span` - nawias zamykający ostry, jest selektorem bezpośredniego dziecka. Szukamy zatem tagów `<span>`, które są bezpośrednimi dziećmi tagu `<p>`
 
-`span:nth-child(2n + 5)` - pseudo klasa `:nth-child()` służy do wybierania elementów na podstawie ich kolejności występowania w tagu nadrzędnym. Innymi słowy - pod uwagę brane są ich indexy. W tym przypadku wybranie zostany co drugi tag `<span>`, zaczynając od piątego dziecka
+`span:nth-child(2n + 5)` - pseudo klasa `:nth-child()` służy do wybierania elementów na podstawie ich kolejności występowania w tagu nadrzędnym. Innymi słowy - pod uwagę brane są ich indexy. W tym przypadku wybranie zostany co drugi tag `<span>`, zaczynając od piątego dziecka.
+
+</details>
 
 ## 11. Jakie style ma podany tag? Dlaczego?
+<details>
+<summary>Odpowiedź</summary>
 
 **Przykład 1 - jaki jest kolor tagu h1?**
 
@@ -259,7 +301,11 @@ div > p > h1 {
 
 **Rozwiązanie**: kolor tła tagu `<nav>` to zielony. Dzieje się tak, ponieważ selektor `.container.flexbox nav` używa dwóch klas, więc jego waga jest wyższa niż selektora `.navigation`, który ma tylko jedną klasę.
 
+</details>
+
 ## 12. Wyjaśnij działanie jednostek vh i vw
+<details>
+<summary>Odpowiedź</summary>
 
 Jednostki `vh` (viewport height) i `vw` (viewport width), jak sama nazwa wskazuje, zachowują się relatywnie względem wymiarów ekranu (czyli inaczej viewportu). Oznacza to, że wraz ze zmianą wymiarów okna, zmienia się także wartość tych jednostek.
 
@@ -275,7 +321,11 @@ Jednostki `vh` (viewport height) i `vw` (viewport width), jak sama nazwa wskazuj
 
 Wykorzystywane są najczęściej do tworzenia responsywnych layoutów.
 
+</details>
+
 ## 13. Jakie wymiary ma podany element? Dlaczego?
+<details>
+<summary>Odpowiedź</summary>
 
 **Przykład 1 - jakie wymiary ma element div?**
 
@@ -326,3 +376,16 @@ div {
 ```
 
 **Rozwiązanie**: odpowiedź to: szerokość `100px`, wysokość `60px`. Dzieje się tak, ponieważ właściwość `box-sizing` ma wartość `border-box`. Oznacza to, że `padding` oraz `border` nie **powiększą element**, za to **zmniejszą przestrzeń dostępną “wewnątrz”**.
+
+</details>
+
+## 14. Wytłumacz różnicę pomiędzy `display: none`, a `visibility: hidden`
+<details>
+<summary>Odpowiedź</summary>
+
+Obie właściwości odpowiadają za ukrywanie elementu HTML, jednak robią to w odmienny sposób:
+`visibility: hidden` - jedynie ukrywa element. Nie zostaje on usunięty z drzewam DOM, nadal posiada wymiary i zajmuje miejsce na stronie (a więc fizycznie nie zostaje z niej usutnięty, jest po prostu niewidoczny).
+
+`display: none` - usuwa element z drzewa DOM. Co za tym idzie, element nie jest widoczny na stronie. Nie zajmuje również żadnego miejsca, ponieważ został dosłownie usunięty.
+
+Również czytniki ekranowe inaczej zareagują na ukryty oraz usunięty element. Te ukryte nadal będą przez nie odczytane, natomiasta usunięte nie.
